@@ -1,6 +1,13 @@
 # ApiSEP
 Use of the SEP API REST for search Cedulas
 
+##Prerequisites
+To Install and run the project you need to have installed globally Bower and NodeJS.
+``` 
+https://bower.io
+https://nodejs.org/en
+```
+
 ##Installation
 
 ```
