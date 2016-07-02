@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "description": "test for fullstack developer 2 mas 1",
+  "main": "server.js",
+  "authors": [
+    "Carlos Linares"
+  ],
+  "license": "private",
+  "keywords": [
+    "angularjs",
+    "nodejs",
+    "html5",
+    "css3",
+    "rest"
+  ],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "Materialize": "materialize#^0.97.6",
+    "angular": "^1.5.7",
+    "angular-resource": "^1.5.7"
+  }
+}

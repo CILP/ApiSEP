@@ -1,0 +1,59 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/Materialize/dist/js/materialize.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-resource/angular-resource.min.js"></script>
+    <script src="controllers/MainController.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="lib/Materialize/dist/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body ng-app="CedulaApp">
+    <div class="container" ng-controller="MainController" >
+      <div class="row">
+        <div class="col s6 center-align">
+          <p>
+            <input class="with-gap" ng-model="byOption.checked" value="license" name="by" type="radio" id="license" checked />
+            <label for="license">Get by Professional License</label>
+          </p>
+        </div>
+        <div class="col s6 center-align">
+          <p>
+            <input class="with-gap" ng-model="byOption.checked" value="name" name="by" type="radio" id="name"  />
+            <label for="name">Get by Name</label>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m12">
+          <input id="input" ng-model="input.text" type="text" class="validate">
+          <label for="input">Search Keyword</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 right-align">
+          <a class="waves-effect waves-light btn-large" ng-click="getCedulas();">Search</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m6" ng-repeat="cedula in cedulas">
+          <ul class="collection with-header">
+            <li class="collection-header teal lighten-2 white-text upper-case">
+              <h4>{{cedula.paterno + " " + cedula.materno + " " + cedula.nombre}}</h4>
+            </li>
+            <li class="collection-item upper-case">Titulo: {{cedula.titulo}}</li>
+            <li class="collection-item upper-case">Institucion: {{cedula.institucion}}</li>
+            <li class="collection-item upper-case">Tipo: {{cedula.tipo}}</li>
+            <li class="collection-item upper-case">Cedula: {{cedula.numCedula}}</li>
+            <li class="collection-item upper-case">A&ntilde;o: {{cedula.anioRegistro}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
